@@ -13,8 +13,8 @@ int get(char c){
 LL ten(string s, LL x){
     LL ans = 0;
     for(int i = 0; i < s.size(); i++){
-		// 可能会爆long long,采用double比较
-		if((double) ans * x + get(s[i]) > 1e16) return 1e18;
+        // 可能会爆long long,采用double比较
+        if((double) ans * x + get(s[i]) > 1e16) return 1e18;
         ans = ans * x + get(s[i]);
     }
     return ans;
