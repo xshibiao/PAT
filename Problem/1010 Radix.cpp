@@ -23,10 +23,11 @@ LL ten(string s, LL x){
 int main(){
     cin >> N1 >> N2 >> tag >> radix;
     if(tag == 2) swap(N1, N2);
-    LL target = ten(N1, radix);
-    int maxinum = 2;
     // 左边界必定是N2中最大的值加1
+    int maxinum = 2;
     for(char c: N2) maxinum = max(maxinum, get(c) + 1);
+    // 右边界在N1范围内
+    LL target = ten(N1, radix);
     LL l = maxinum, r = target;
     while(l < r){
         LL mid = l + (r - l) / 2;
