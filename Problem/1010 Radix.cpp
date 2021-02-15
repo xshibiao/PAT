@@ -25,7 +25,7 @@ int main(){
     if(tag == 2) swap(N1, N2);
     LL target = ten(N1, radix);
     int maxinum = 2;
-	// 左边界必定是N2中最大的值加1
+    // 左边界必定是N2中最大的值加1
     for(char c: N2) maxinum = max(maxinum, get(c) + 1);
     LL l = maxinum, r = target;
     while(l < r){
